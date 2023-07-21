@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script src="script.js">
+    var btn=document.querySelectorAll(".btn");
+var emoji=document.getElementById("emoji");
+
+Array.from(btn).forEach((e, index)=>{ //1
+    e.addEventListener("click", ()=>{ 
+        for(var  j=0;j<btn.length;j++){
+            btn[j].style.color="white";
+        }
+        for(var i=0;i<=index;i++){
+            btn[i].style.color="#ffc83d";
+        }
+        switch(index){
+            case 0:
+                emoji.innerHTML="&#128550";
+                break;
+                case 1:
+                emoji.innerHTML="&#128543";
+                break;
+                case 2:
+                emoji.innerHTML="&#128528";
+                break;
+                case 3:
+                emoji.innerHTML="&#128578";
+                break;
+                case 4:
+                emoji.innerHTML="&#128550";
+                break;
+        }
+    })
+}
+)
+  </script>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #c4dfe6;
+  }
+
+  container {
+      height: 200px;
+      width: 30px;
+      background-color: 3013b45;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 20px;
+
+  }
+
+  .btn {
+      background: none;
+      border: none;
+      font-size: 50px;
+      color: white;
+      cursor: pointer;
+  }
+
+  .h1 {
+      font-size: 80px;
+  }
+</style>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet href="style.css>
+  </head>
+  <body>
+  <div class="container">
+  <h1 id="emoji">&#128512</h1>
+  <div>
+  <button class="btn">&#9733</button>
+    <button class="btn">&#9733</button>
+
+  <button class="btn">&#9733</button>
+
+  <button class="btn">&#9733</button>
+    <button class="btn">&#9733</button>
+
+  </div>
+  </div>
+
+</html>
 
